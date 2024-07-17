@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: antiquewhite;  
+}
+
+.content-icons{
+    color: #FA7A57;
+}
+
+/*******Side Bar Dashboard content********/
+.sidebar {
+    width: 250px;
+    height: 600px;
+    background-color: #FA7A57;
+    font-size: 13px;
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    z-index: 2;
+    padding: 40px;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 40px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo .icon {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.logo .text {
+    font-size: 15px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    padding: 10px 0;
+}
+
+nav ul li i {
+    margin-right: 20px;
+}
+
+nav ul li .badge {
+    background: #fff;
+    color: #FA7A57;
+    border-radius: 12px;
+    padding: 3px 8px;
+    font-size: 12px;
+    margin-left: auto;
+}
+
+.history {
+    background: #FFF8E1; 
+    padding: 15px;
+    top: 30px;
+    border-radius: 10px;
+    color: #333;
+    position: relative;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/*******************************Main content***************************/
+.main-content {
+    height: 950px;
+    background-color: #fff;
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    right:20px;
+    padding: 50px 100px 100px 200px;
+    border-radius: 30px;
+}
+
+/*Header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.user-info {
+    padding: 10px;
+}
+
+/*Content-wrapper*/
+
+.content-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/***********************Centre-content**********************/
+
+/*First and second section of centre-content*/
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-bottom: 20px; */
+    font-size: 13px;
+}
+
+
+.stat-item {
+    background: #fff;
+    padding: 20px;
+    width: 22%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Bar chart */
+.profile-growth-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+.profile-growth-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.profile-growth-header .heading{
+    font-size: 15px;
+}
+.profile-growth-header .subheading{
+    font-size: 12px;
+}
+h1 {
+    margin: 0;
+}
+
+.subheading {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.chart-section{
+    display: flex;
+    flex-direction: row;
+}
+.chart-years{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 13px;
+    height: 200px;
+}
+.chart{
+    width: 100%;
+    font-size: 13px;
+}
+
+.chart-bars {
+    border: 1px solid black;
+    border-top: 0;
+    border-right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.bar {
+    width: 20px;
+    background-color: #ff6b6b;
+    position: relative;
+    border-radius: 20px;
+}
+
+.value {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.bar-days {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #777;
+}
+
+.years {
+    border-radius: 20px;
+    background: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #e0e0e0;
+    color: #777;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button.active {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+
+/*Fourth section of centre-content (Project Mangement Table)*/
+.project-table {
+    width: 100%;
+    font-size: 10px;
+}
+.project-table th, .project-table td {
+    padding: 15px;
+    text-align: left;
+}
+.project-table th {
+    background-color: #f8f8f8;
+}
+.project-table td.status {
+    text-align: center;
+}
+.project-table .status .badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    color: #fff;
+}
+.project-table .status .badge {
+    background-color: rgb(163, 159, 159);
+}
+.project-table .status .badge {
+    color: rgb(62, 62, 249);
+}
+
+.project-table .actions {
+    text-align: center;
+}
+.project-table .actions .dot-menu {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/************************ ************Side-content *********************************/
+
+/* Side Project Accomplishments*/
+
+.projects{
+    font-size: 13px;
+    /* padding: 0px 20px; */
+}
+.project-item{
+    background: #fff;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* Analytics container */
+
+.analytics-container{
+    height: 150px;
+    margin-top: 20px;
+}
+.analytics-header{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.analytics-blocks{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+
+}
+.analytics-block {
+    width: 25%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+   
+}
+
+.analytics-block.first-block {
+    height: 50px;
+    background-color: whitesmoke; 
+    position: relative;
+    top: 50px;
+}
+
+.analytics-block.second-block  {
+    height: 100px;
+    background-color: rgb(244, 154, 122); 
+}
+
+.analytics-block.third-block  {
+    height: 50px;
+    background-color: whitesmoke; 
+    position: relative;
+    top: 50px;
+}
+
+/* Analytics block date  */
+.analytics-block.first-block .analytics-block-date {
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+.analytics-block.second-block .analytics-block-date {
+    position: relative;
+    top: 70px;
+    text-align: center;
+}
+.analytics-block.third-block .analytics-block-date {
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+
+
+
+/* Daily Calender */
+.calendar {
+    display: flex;
+    flex-direction: row;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+.day-name {
+    font-size: 10px;
+    color: #888;
+}
+
+.day-number {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.selected {
+    background-color: #FF6347;
+    color: #fff;
+}
+
+.selected .day-name,
+.selected .day-number {
+    color: #fff;
+}
+
+/* Audit section */
+.audit-container{
+    margin-top: 30px;
+}
+.audit-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #F1F3F4;
+    border-radius: 15px;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+}
+
+.close {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #999;
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Circular Progress container */
+.progress-container {
+    padding: 20px;
+}
+
+.circular-progress {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    border-radius: 50%;
+    background: conic-gradient(#FF6347 0% 75%, #fff 75% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.inner-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.percentage {
+    font-size: 15px;
+    color: #FF6347;
+    font-weight: bold;
+}
+
+.label {
+    font-size: 10px;
+    color: #999;
+}
+
+.linear-progress-container {
+    width: 200px;
+    margin-top: 20px;
+}
+
+.linear-progress {
+    width: 100%;
+    height: 6px;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 5px;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #FF6347;
+    width: 38%;
+    border-radius: 3px 0 0 3px;
+}
