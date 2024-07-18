@@ -4,14 +4,14 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
+ 
 body {
     display: flex;
     background-color: antiquewhite;  
 }
 
 .content-icons{
-    color: #FA7A57;
+    color: #FA7A57; 
 }
 
 /*******Side Bar Dashboard content********/
@@ -87,29 +87,30 @@ nav ul li .badge {
 
 /*******************************Main content***************************/
 .main-content {
-    height: 950px;
+    height: 900px;
     background-color: #fff;
     position: absolute;
     left: 100px;
     top: 20px;
     right:20px;
-    padding: 50px 100px 100px 200px;
+    padding: 50px 100px 0px 200px;
     border-radius: 30px;
 }
 
 /*Header*/
 header {
+    height:10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 header input[type="text"] {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 300px;
+    width: 50%;
 }
 
 .user-info {
@@ -127,13 +128,14 @@ header input[type="text"] {
 
 /***********************Centre-content**********************/
 
-/*First and second section of centre-content*/
+/*First and third component of centre-content*/
 .stats {
+    height:10%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin-bottom: 20px; */
-    font-size: 13px;
+    margin-bottom: 20px;
+    font-size: 12px;
 }
 
 
@@ -156,6 +158,7 @@ header input[type="text"] {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 .profile-growth-header .heading{
     font-size: 15px;
@@ -196,6 +199,7 @@ h1 {
     justify-content: space-between;
     align-items: flex-end;
     height: 200px;
+    margin-left: 10px;
     margin-bottom: 20px;
 }
 
@@ -226,9 +230,10 @@ h1 {
 }
 
 .years {
+   height: fit-content;
     border-radius: 20px;
     background: #e0e0e0;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 button {
@@ -248,10 +253,10 @@ button.active {
 }
 
 
-/*Fourth section of centre-content (Project Mangement Table)*/
+/*Footer of centre content (Project Mangement Table)*/
 .project-table {
     width: 100%;
-    font-size: 10px;
+    font-size: 12px;
 }
 .project-table th, .project-table td {
     padding: 15px;
@@ -485,9 +490,7 @@ button.active {
     height: 6px;
     background-color: #f1f1f1;
     border-radius: 3px;
-    overflow: hidden;
     margin-top: 5px;
-    position: relative;
 }
 
 .progress-bar {
@@ -495,4 +498,91 @@ button.active {
     background-color: #FF6347;
     width: 38%;
     border-radius: 3px 0 0 3px;
+}
+
+
+/* Media Queries for tablets */
+@media  (max-width: 1000px) {
+    .sidebar {
+        width: 200px;
+        padding: 20px;
+        left: 15px;
+        top: 30px;
+    }
+    
+    .main-content {
+        height: 1900px;
+        padding: 40px;
+        left: 220px;
+        top: 20px;
+        right: 20px;
+    }
+    header{
+        height: 5%;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+    }
+
+    .stat-item {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .profile-growth-container {
+        width: 100%;
+    }
+
+    .project-table {
+        font-size: 12px;
+    }
+
+    .analytics-block {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .calendar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .day {
+        padding: 5px;
+        border-radius: 25px;
+    }
+
+    .day-name,
+    .day-number {
+        font-size: 8px;
+    }
+}
+
+@media  (max-width: 750px) {
+    .sidebar{
+        display: none;
+    }
+    .main-content{
+        height: 2300px;
+        padding: 40px;
+        left: 20px;
+        top: 20px;
+        right: 20px;
+    }
+    .stats{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .stat-item{
+        width:100%;
+    }
+    
 }
